@@ -6,6 +6,7 @@ body {
 
 html {
     font-family: 'Roboto Mono';
+    scroll-behavior: smooth;
 }
 
 nav {
@@ -51,7 +52,7 @@ nav ul li a:hover {
     color: whitesmoke;
     text-align: center;
     letter-spacing: 3px;
-    background-image: url('skyline.jpeg');
+    background-image: url('Photos/skyline.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -75,7 +76,7 @@ nav ul li a:hover {
 
 #central-park {
     list-style: none;
-    background-image: url('central-park.jpeg');
+    background-image: url('Photos/central-park.jpeg');
     background-size: cover;
     text-align: center;
     color: rgb(255, 68, 0);
@@ -94,4 +95,76 @@ nav ul li a:hover {
     width: fit-content;
     margin-left: 90px;
     margin-right: 150px;
+}
+
+#statue-of-liberty {
+    list-style: none;
+    background-image: url('Photos/statue-of-liberty.jpeg');
+    background-size: cover;
+    text-align: left;
+    color: white;
+    font-size: 50px;
+    padding: 300px;
+    padding-left: 120px;
+    margin-right: 40px;
+    letter-spacing: 30px;
+}
+
+#statue-of-liberty-text {
+    font-family: Kanit;
+    font-size: 30px;
+    text-align: center;
+    line-height: 3;
+    letter-spacing: 5px;
+    width: fit-content;
+    margin-left: 90px;
+    margin-right: 150px;
+}
+
+#times-square {
+    list-style: none;
+    background-image: url('Photos/times-square.jpeg');
+    background-size: cover;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    padding: 300px;
+    margin-right: 40px;
+    letter-spacing: 30px;
+}
+
+#times-square-text {
+    font-family: Kanit;
+    font-size: 30px;
+    text-align: center;
+    line-height: 3;
+    letter-spacing: 5px;
+    width: fit-content;
+    margin-left: 90px;
+    margin-right: 150px;
+}
+
+#contact {
+    background-image: url(Photos/footer2.jpeg);
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+
+#contact h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#contact p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-style: bold;
+}
+
+#contact p strong {
+    font-weight: bold;
+    margin-right: 5px;
+    color: #000;
 }
