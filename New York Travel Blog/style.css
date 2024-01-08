@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: azure;
+    background-color: snow;
 }
 
 html {
@@ -15,7 +15,7 @@ nav {
     width: 100%;
     height: 80px;
     z-index: 2;
-    background-color: rgba(220, 206, 188, 0.95);
+    background-color: rgba(255, 255, 255, 0.95);
     margin: 0;
     padding: 0;
 }
@@ -28,7 +28,7 @@ nav ul {
 
 nav ul li{
     display: inline-block;
-    margin-right: 70px;
+    margin-right: 100px;
 }
 
 nav ul li a {
@@ -42,7 +42,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: rgb(197, 196, 196);
+    background-color: rgb(224, 223, 223);
 }
 
 #title {
@@ -64,5 +64,34 @@ nav ul li a:hover {
 
 .atraction-info h3,
 #attraction-list {
-    margin-left: 50px;
+    margin-left: 0px;
+}
+
+.atraction-info h3 {
+    margin-left: 20px;
+    font-family: Kanit;
+    font-size: 50px;
+}
+
+#central-park {
+    list-style: none;
+    background-image: url('central-park.jpeg');
+    background-size: cover;
+    text-align: center;
+    color: rgb(255, 68, 0);
+    font-size: 50px;
+    padding: 300px;
+    margin-right: 40px;
+    letter-spacing: 30px;
+}
+
+#central-park-text {
+    font-family: Kanit;
+    font-size: 30px;
+    text-align: center;
+    line-height: 3;
+    letter-spacing: 5px;
+    width: fit-content;
+    margin-left: 90px;
+    margin-right: 150px;
 }
