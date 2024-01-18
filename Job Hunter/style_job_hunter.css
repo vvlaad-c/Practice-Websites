@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-color: snow;
 }
 
 html {
@@ -36,10 +36,10 @@ html {
 }
 
 #jumbotron h1::after {
-    content: "|"; /* The blinking cursor line */
+    content: "|"; 
     display: inline-block;
     width: 0;
-    animation: blink 1s step-end infinite; /* Adjust blinking duration as needed */
+    animation: blink 1s step-end infinite;
 }
 
 
@@ -54,4 +54,31 @@ html {
     letter-spacing: 2px;
     padding: 40px;
     font-size: 40px;
+}
+
+#card1, #card2{
+    margin-bottom: 70px;
+    border: solid 2px black;
+    width: 20rem;
+}
+
+#card3 {
+    margin-left: 42px;
+    width: 20rem;
+    border: solid 2px black;
+}
+
+.card {
+    transition: transform 0.3s ease-in-out; 
+  }
+
+  .card:hover {
+    transform: scale(1.03); 
+  }
+
+
+#reviewer-data {
+    margin-top: 10px;
+    color: grey;
+    font-style: italic;
 }
