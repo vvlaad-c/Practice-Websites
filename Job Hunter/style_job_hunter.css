@@ -6,6 +6,7 @@ body {
 
 html {
     scroll-behavior: smooth;
+    font-family: 'Raleway';
 }
 
 #navbar {
@@ -49,17 +50,19 @@ html {
     }
 }
 
-#reviews-heading {
+#reviews-heading, #start-now-heading {
     font-family: 'Lato';
     letter-spacing: 2px;
     padding: 40px;
     font-size: 40px;
+    font-family: 'Raleway';
 }
 
 #card1, #card2{
     margin-bottom: 70px;
     border: solid 2px black;
     width: 20rem;
+    font-family: 'Raleway';
 }
 
 #card3 {
@@ -81,4 +84,8 @@ html {
     margin-top: 10px;
     color: grey;
     font-style: italic;
+}
+
+#start-now-heading {
+    margin-top: 30px;
 }
