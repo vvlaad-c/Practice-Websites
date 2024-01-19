@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Raleway';
+}
+
+#navbar {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+#j-tron {
+    padding: 120px;
+    background-image: url(Photos/—Pngtree—simple\ white\ flat\ vectors\ with_1353884.png);
+    opacity: 0.7;
+    display: flex;
+}
+
+#j-tron-text {
+    text-align: center;
+    font-family: 'Raleway';
+    letter-spacing: 4px;
+    font-size: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+#j-tron-text::after {
+    content: '|';
+    right: 0;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        visibility: hidden;
+    }
+}
+
+#jobs-heading {
+    margin-left: 40px;
+    margin-top: 80px;
+    font-family: 'Raleway';
+    letter-spacing: 4px;
+    margin-bottom: 60px;
+}
+
+#card1, #card2{
+    margin-bottom: 70px;
+    border: solid 2px black;
+    width: 20rem;
+    font-family: 'Raleway';
+}
+
+#card3 {
+    margin-left: 42px;
+    width: 20rem;
+    border: solid 2px black;
+}
+
+.card {
+    transition: transform 0.3s ease-in-out; 
+  }
+
+  .card:hover {
+    transform: scale(1.03); 
+  }
