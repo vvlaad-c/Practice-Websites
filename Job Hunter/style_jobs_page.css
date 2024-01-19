@@ -69,3 +69,12 @@ html {
   .card:hover {
     transform: scale(1.03); 
   }
+
+#card2 {
+    height: 63%;
+    overflow: hidden;
+}
+
+#card1 {
+    height: 63%;
+}
