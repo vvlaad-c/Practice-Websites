@@ -51,7 +51,7 @@ html {
     margin-bottom: 60px;
 }
 
-#card1, #card2{
+#card1, #card2, #card3{
     margin-bottom: 70px;
     border: solid 2px black;
     width: 20rem;
@@ -59,9 +59,7 @@ html {
 }
 
 #card3 {
-    margin-left: 42px;
-    width: 20rem;
-    border: solid 2px black;
+    margin-left: 45px;
 }
 
 .card {
