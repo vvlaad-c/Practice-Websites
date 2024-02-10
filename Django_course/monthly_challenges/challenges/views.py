@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
+from django.urls import reverse
 
 # Challenges dictionary
 monthly_challenges = {
@@ -18,17 +19,31 @@ monthly_challenges = {
 }
 
 # Views Functions
+def index(request):
+    list_items = ""
+    months = list(monthly_challenges.keys())
+
+    for month in months:
+        month_path = reverse("month-challenge", args=[month])
+        capitalized_month = month.capitalize()
+        list_items += f"<li><a href=\"{month_path}\">{capitalized_month}</a></li>"
+
+    response_data = f"<ul>{list_items}</ul>" 
+    return HttpResponse(response_data)
+
 def monthly_challenge_int(request, month):
     months = list(monthly_challenges.keys())
     if month > len(months):
-        return HttpResponseNotFound("Invalid month")
+        return HttpResponseNotFound("<h1>Please enter a valid month</h1>")
     
     redirect_month = months[month - 1]
-    return HttpResponseRedirect("/challenges/" + redirect_month)
+    redirect_path = reverse("month-challenge", args=[redirect_month])
+    return HttpResponseRedirect(redirect_path)
 
 def monthly_challenge(request, month):
     try:
         text = monthly_challenges[month]
-        return HttpResponse(text)
+        response_data = f"<h1>{text}</h1>"
+        return HttpResponse(response_data)
     except:
-        return HttpResponseNotFound("Please enter a valid month!")
+        return HttpResponseNotFound("<h1>Please enter a valid month!</h1>")
