@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@1,600&display=swap');
+
+html {
+    font-family: 'Arimo', sans-serif;
+}
+
+body {
+    margin-left: 5px;
+}
