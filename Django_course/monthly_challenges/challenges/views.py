@@ -20,16 +20,11 @@ monthly_challenges = {
 
 # Views Functions
 def index(request):
-    list_items = ""
     months = list(monthly_challenges.keys())
-
-    for month in months:
-        month_path = reverse("month-challenge", args=[month])
-        capitalized_month = month.capitalize()
-        list_items += f"<li><a href=\"{month_path}\">{capitalized_month}</a></li>"
-
-    response_data = f"<ul>{list_items}</ul>" 
-    return HttpResponse(response_data)
+    
+    return render(request, "challenges/index.html", {
+        "months": months
+    })
 
 def monthly_challenge_int(request, month):
     months = list(monthly_challenges.keys())
@@ -42,7 +37,17 @@ def monthly_challenge_int(request, month):
 
 def monthly_challenge(request, month):
     try:
-        text = monthly_challenges[month]
-        return render(request, "challenges/challenge.html")
+        challenge_text = monthly_challenges[month]
+        for key, value in monthly_challenges.items():
+            if value == challenge_text:
+                challenge_key = key
+                break
+        else:
+            challenge_key = None
+
+        return render(request, "challenges/challenge.html", {
+            "text": challenge_text,
+            "month": challenge_key
+        })
     except:
         return HttpResponseNotFound("<h1>Please enter a valid month!</h1>")
