@@ -7,14 +7,7 @@
   <link rel="stylesheet" href="{% static "blog/index.css" %}">
 {% endblock css_files %}
 
-{% block content %}
-  <header id="main-navigation">
-    <h1><a href="">Vlad's blog</a></h1>
-    <nav>
-      <a href="">All posts</a>
-    </nav>
-  </header> 
-
+{% block content %} 
   <section id="welcome">
     <header>
       <img src="{% static "blog/images/profile_picture.jpg" %}" alt="Vlad, the author of the blog"> 
@@ -26,17 +19,7 @@
   <section id="latest-posts">
     <h2>My latest thoughts</h2>
     <ul>
-      <li>
-        <article class="post">
-          <a href="">
-            <img src="{% static "blog/images/mountains.jpg" %}" alt="Hiking up the montain">
-            <div class="post__content">
-              <h3>Mountain Hiking</h3>
-              <p>Last week I went mountain hiking with my friends!</p>
-            </div>
-          </a>
-        </article>
-      </li>
+      {% include "blog/includes/post.html" %}
     </ul>
   </section>
 
